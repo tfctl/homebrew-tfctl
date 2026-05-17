@@ -5,13 +5,13 @@
 class Tfctl < Formula
   desc "CLI to query Terraform/OpenTofu state across backends"
   homepage "https://github.com/tfctl/tfctl"
-  version "1.2.1"
+  version "1.2.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.1/tfctl_1.2.1_darwin_x86_64.tar.gz"
-      sha256 "7df15b4edf9bc4148440192270b1441d346d831a9d0b24ac1974ca602aa61995"
+      url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.2/tfctl_1.2.2_darwin_x86_64.tar.gz"
+      sha256 "53086c8b3c273f951c0f3f37d1af6ea3e3f9516bcfdbaec4616a341b32094d58"
 
       define_method(:install) do
         bin.install "tfctl"
@@ -19,8 +19,8 @@ class Tfctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.1/tfctl_1.2.1_darwin_arm64.tar.gz"
-      sha256 "c05ef2aedc1f25aa722192b9552ddfe314ac561a8ac03bbb9761b80fedb14d8c"
+      url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.2/tfctl_1.2.2_darwin_arm64.tar.gz"
+      sha256 "3a3419a3f0f148348b7a7df5b0f77332d34006120fddecf5dfd1a3f2cc9729d9"
 
       define_method(:install) do
         bin.install "tfctl"
@@ -31,16 +31,16 @@ class Tfctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.1/tfctl_1.2.1_linux_x86_64.tar.gz"
-      sha256 "2ca038b1f2fec87759b431dffb71f7a9aa0b17fa855463b32b6146d03a97ed40"
+      url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.2/tfctl_1.2.2_linux_x86_64.tar.gz"
+      sha256 "33777141451816e4a1c20900562ddced0e4305f4624cedd6fd151af4778c5a2f"
       define_method(:install) do
         bin.install "tfctl"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.1/tfctl_1.2.1_linux_arm64.tar.gz"
-      sha256 "5c9ef52123f719cca0166ba6469e927c9d891216b9e34cb023ccf9db9899a6bd"
+      url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.2/tfctl_1.2.2_linux_arm64.tar.gz"
+      sha256 "36dc28f789203de6b1f695b5d5e80d48919ede1592e5273940a0560a231bb527"
       define_method(:install) do
         bin.install "tfctl"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
