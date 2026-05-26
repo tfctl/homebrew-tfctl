@@ -11,7 +11,7 @@ class Tfctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.3/tfctl_1.2.3_darwin_x86_64.tar.gz"
-      sha256 "df6e42d3c69850812e6afc2dd12b8bb9f13e7570b5b67f1591835bb0c7d7e113"
+      sha256 "128b5bebcd5a6314c9426214f401a6c8bb3850bdd5614e963b4cf362fafc5ee2"
 
       define_method(:install) do
         bin.install "tfctl"
@@ -20,7 +20,7 @@ class Tfctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.3/tfctl_1.2.3_darwin_arm64.tar.gz"
-      sha256 "19fe121fcffe950c72024e9e3ae25ebf7a006fcbee7685f5ad961881d41dad26"
+      sha256 "b5666fba71364a9aad08668699eb528888117858f728e47a00a6c45017b171d7"
 
       define_method(:install) do
         bin.install "tfctl"
@@ -32,7 +32,7 @@ class Tfctl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.3/tfctl_1.2.3_linux_x86_64.tar.gz"
-      sha256 "e3657fe7609f60b488f0749259faf919ccb97cfdbc76973050dbf9ccf8c8a26f"
+      sha256 "88b7c455b8e6829c391544b7fd77ae3a15c36003de5dac14ed7e04be94313749"
       define_method(:install) do
         bin.install "tfctl"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
@@ -40,7 +40,7 @@ class Tfctl < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/tfctl/homebrew-tfctl/releases/download/v1.2.3/tfctl_1.2.3_linux_arm64.tar.gz"
-      sha256 "12633a88efd8896d4a48eb651eb4f0b64f96b0f96cf78dd7c62d813342d63714"
+      sha256 "74d832c7daab0337807edb8c126daedcd7e3c5e41a892fd708892f42aecf4803"
       define_method(:install) do
         bin.install "tfctl"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
